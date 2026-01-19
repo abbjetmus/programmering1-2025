@@ -78,7 +78,7 @@ Kom igång med Vue 3 och första komponenten.
 - [Vue 3 Hands On - Step 1](https://vuejs.org/tutorial/#step-1)
 
 **Övningar:**
-- [Övning 0 - Projekt Setup](../övningar/README.md#övning-0---projekt-setup)
+- [Övning 0 - Projekt Setup](./övningar/README.md#övning-0---projekt-setup)
 
 ---
 
@@ -89,8 +89,8 @@ Visa data dynamiskt i templates med mustache-syntax.
 - [Vue.js Interpolation - Step 2](https://vuejs.org/tutorial/#step-2)
 
 **Övningar:**
-- [Övning 0.1 - Interpolation](../övningar/README.md#övning-01---interpolation)
-- [Övning 2 - Data-bunden komponent](../övningar/README.md#övning-2---data-bunden-komponent-event-details)
+- [Övning 0.1 - Interpolation](./övningar/README.md#övning-01---interpolation)
+- [Övning 2 - Data-bunden komponent](./övningar/README.md#övning-2---data-bunden-komponent-event-details)
 
 ---
 
@@ -101,8 +101,8 @@ Binda attribut till data med `v-bind` eller `:`.
 - [Vue.js Attribute Binding - Step 3](https://vuejs.org/tutorial/#step-3)
 
 **Övningar:**
-- [Övning 0.2 - Attribute Binding](../övningar/README.md#övning-02---attribute-binding)
-- [Övning 5 - Style Binding](../övningar/README.md#övning-5---style-bindning)
+- [Övning 0.2 - Attribute Binding](./övningar/README.md#övning-02---attribute-binding)
+- [Övning 5 - Style Binding](./övningar/README.md#övning-5---style-bindning)
 
 ---
 
@@ -113,8 +113,8 @@ Hantera användarinteraktioner som klick med `v-on` eller `@`.
 - [Vue.js Event Listeners - Step 4](https://vuejs.org/tutorial/#step-4)
 
 **Övningar:**
-- [Övning 0.7 - Eventhantering](../övningar/README.md#övning-07---eventhantering)
-- [Övning 1.1 - Formulär](../övningar/README.md#övning-11---formulär)
+- [Övning 0.7 - Eventhantering](./övningar/README.md#övning-07---eventhantering)
+- [Övning 1.1 - Formulär](./övningar/README.md#övning-11---formulär)
 
 ---
 
@@ -125,9 +125,9 @@ Synkronisera formulärdata med `v-model`.
 - [Vue.js Form Bindings - Step 5](https://vuejs.org/tutorial/#step-5)
 
 **Övningar:**
-- [Övning 0.8 - Tvåvägsbinding](../övningar/README.md#övning-08---tvåvägsbinding-v-model)
-- [Övning 1.1 - Formulär](../övningar/README.md#övning-11---formulär)
-- [Övning 5 - Style Binding](../övningar/README.md#övning-5---style-bindning)
+- [Övning 0.8 - Tvåvägsbinding](./övningar/README.md#övning-08---tvåvägsbinding-v-model)
+- [Övning 1.1 - Formulär](./övningar/README.md#övning-11---formulär)
+- [Övning 5 - Style Binding](./övningar/README.md#övning-5---style-bindning)
 
 ---
 
@@ -138,8 +138,8 @@ Visa/dölj element med `v-if`, `v-else` och `v-show`.
 - [Vue.js Conditional Rendering - Step 6](https://vuejs.org/tutorial/#step-6)
 
 **Övningar:**
-- [Övning 0.3 - Villkorlig Rendering](../övningar/README.md#övning-03---villkorlig-rendering)
-- [Övning 7 - v-if direktivet](../övningar/README.md#övning-7---v-if-direktivet-villkorlig-rendering)
+- [Övning 0.3 - Villkorlig Rendering](./övningar/README.md#övning-03---villkorlig-rendering)
+- [Övning 7 - v-if direktivet](./övningar/README.md#övning-7---v-if-direktivet-villkorlig-rendering)
 
 ---
 
@@ -150,10 +150,10 @@ Rendera listor dynamiskt med `v-for`.
 - [Vue.js List Rendering - Step 7](https://vuejs.org/tutorial/#step-7)
 
 **Övningar:**
-- [Övning 0.4 - List Rendering](../övningar/README.md#övning-04---list-rendering)
-- [Övning 0.6 - API-anrop (Lista)](../övningar/README.md#övning-06---api-anrop-lista-av-objekt)
-- [Övning 1 - Hello From Group X](../övningar/README.md#övning-1---hello-from-group-x)
-- [Övning 2.2 - API-data presentation](../övningar/README.md#övning-22---api-data-presentation)
+- [Övning 0.4 - List Rendering](./övningar/README.md#övning-04---list-rendering)
+- [Övning 0.6 - API-anrop (Lista)](./övningar/README.md#övning-06---api-anrop-lista-av-objekt)
+- [Övning 1 - Hello From Group X](./övningar/README.md#övning-1---hello-from-group-x)
+- [Övning 2.2 - API-data presentation](./övningar/README.md#övning-22---api-data-presentation)
 
 ---
 
@@ -164,8 +164,8 @@ Beräknade värden som uppdateras automatiskt baserat på reaktiva data.
 - [Vue.js Computed Property - Step 8](https://vuejs.org/tutorial/#step-8)
 
 **Övningar:**
-- [Övning 0.9 - Computed Properties & Watchers](../övningar/README.md#övning-09---computed-properties--watchers)
-- [Övning 8 - Class Binding & Computed Property](../övningar/README.md#övning-8---class-bindning--computed-property)
+- [Övning 0.9 - Computed Properties & Watchers](./övningar/README.md#övning-09---computed-properties--watchers)
+- [Övning 8 - Class Binding & Computed Property](./övningar/README.md#övning-8---class-bindning--computed-property)
 
 ---
 
@@ -176,9 +176,9 @@ Livscykelhooks och komma åt DOM-element direkt.
 - [Vue.js Lifecycle and Template Refs - Step 9](https://vuejs.org/tutorial/#step-9)
 
 **Övningar:**
-- [Övning 0.5 - API-anrop (Ett objekt)](../övningar/README.md#övning-05---api-anrop-ett-objekt)
-- [Övning 0.6 - API-anrop (Lista)](../övningar/README.md#övning-06---api-anrop-lista-av-objekt)
-- [Övning 2.2 - API-data presentation](../övningar/README.md#övning-22---api-data-presentation)
+- [Övning 0.5 - API-anrop (Ett objekt)](./övningar/README.md#övning-05---api-anrop-ett-objekt)
+- [Övning 0.6 - API-anrop (Lista)](./övningar/README.md#övning-06---api-anrop-lista-av-objekt)
+- [Övning 2.2 - API-data presentation](./övningar/README.md#övning-22---api-data-presentation)
 
 ---
 
@@ -189,8 +189,8 @@ Reagera på specifika förändringar i data med `watch`.
 - [Vue.js Watchers - Step 10](https://vuejs.org/tutorial/#step-10)
 
 **Övningar:**
-- [Övning 0.9 - Computed Properties & Watchers](../övningar/README.md#övning-09---computed-properties--watchers)
-- [Övning 6 - Watcher](../övningar/README.md#övning-6---watcher)
+- [Övning 0.9 - Computed Properties & Watchers](./övningar/README.md#övning-09---computed-properties--watchers)
+- [Övning 6 - Watcher](./övningar/README.md#övning-6---watcher)
 
 ---
 
@@ -201,9 +201,9 @@ Skapa återanvändbara komponenter för att strukturera din kod.
 - [Vue.js Components - Step 11](https://vuejs.org/tutorial/#step-11)
 
 **Övningar:**
-- [Övning 1 - Hello From Group X](../övningar/README.md#övning-1---hello-from-group-x)
-- [Övning 1.2 - Flera komponenter](../övningar/README.md#övning-12---flera-komponenter)
-- [Övning 2 - Data-bunden komponent](../övningar/README.md#övning-2---data-bunden-komponent-event-details)
+- [Övning 1 - Hello From Group X](./övningar/README.md#övning-1---hello-from-group-x)
+- [Övning 1.2 - Flera komponenter](./övningar/README.md#övning-12---flera-komponenter)
+- [Övning 2 - Data-bunden komponent](./övningar/README.md#övning-2---data-bunden-komponent-event-details)
 
 ---
 
@@ -214,7 +214,7 @@ Skicka data från en parent-komponent till en child-komponent.
 - [Vue.js Props - Step 12](https://vuejs.org/tutorial/#step-12)
 
 **Övningar:**
-- [Övning 3 - Props (Parent → Child)](../övningar/README.md#övning-3---props-parent--child)
+- [Övning 3 - Props (Parent → Child)](./övningar/README.md#övning-3---props-parent--child)
 
 ---
 
@@ -225,7 +225,7 @@ Skicka data från en child-komponent till en parent-komponent.
 - [Vue.js Emit Events - Step 13](https://vuejs.org/tutorial/#step-13)
 
 **Övningar:**
-- [Övning 4 - Emit Events (Child → Parent)](../övningar/README.md#övning-4---emit-events-child--parent)
+- [Övning 4 - Emit Events (Child → Parent)](./övningar/README.md#övning-4---emit-events-child--parent)
 
 ---
 
