@@ -1,99 +1,247 @@
-# VUE
+# Vue.js 3
 
-Vue 3 är den senaste versionen av Vue och versionen vi kommer att använda.
+Vue.js 3 är den senaste versionen av Vue och versionen vi kommer att använda i denna kurs.
 
-## Intro
+## Snabbstart
 
-Nästa del i vår JavaScript resa är att lära oss om Vue.js för att enklare och snabbare kunna utveckla applikationer.
+### Viktiga resurser
 
-- Vue är ett progressivt open-source ramverk för att bygga användargränssnitt, till en början utvecklad av en Google avhoppare som heter Evan You, men underhålls idag av ett team.
+- [Vue 3 Hands On Tutorial](https://vuejs.org/tutorial/#step-1) - Interaktiv övningsmiljö
+- [Vue.js Officiell Dokumentation](https://vuejs.org/guide/quick-start.html)
+- [Vue 3 With Danny (YouTube)](https://www.youtube.com/watch?v=9whgkjxoCME) - Videokurs
+- [Vue.pptx](./Vue.pptx) - PowerPoint-presentation
 
-- Core delen av ramverket är endast fokuserat på visningsskiktet och är enkelt att komma igång med.
+---
 
-- Vue är också fullt kapabelt att bygga sofistikerade applikationer (Single Page Applications).
+## Introduktion
 
-- Vue är flexibelt och enkelt.
+Denna guide ger dig en praktisk introduktion till Vue.js 3 med fokus på:
+- **Composition API** - Modern Vue 3-syntax
+- **Single File Components (SFC)** - Strukturerad komponentutveckling
+- **Reaktivitet** - Automatiska UI-uppdateringar
+- **Komponentkommunikation** - Props, Events och Slots
 
-- Vue tillåter dig att använde det i en del av en befintlig applikation (plugin) eller hantera hela applikationen från start (CLI).
+**Rekommendation:** Börja med Vue 3 Hands On-tutorialen och följ genomgången i PowerPoint-presentationen.
 
-- Vue-Directives är den del av Vue.js som lägger speciell betydelse och beteende till vanliga html-element på sidan.
+## Vad är Vue.js?
 
-- Vue förser oss med reaktivitet vilket gör att våra vyer/sidor automagiskt uppdateras när vårat data ändras.
+### Vue.js - Progressivt JavaScript-ramverk
 
-## Steg 1
-Börja med att hämta ner powerpointen med namnet Vue.pptx och gå igenom innehållet på länken **Vue 3 Hands On** och lös övningsuppgifterna där. Vill man titta på en Youtube video om Vue 3 rekommenderas ** Vue 3 With Danny**.  
-<br>
-- [Vue 3 Hands On](https://vuejs.org/tutorial/#step-1)
+**Vue.js** är ett progressivt open-source ramverk för att bygga användargränssnitt som låter dig:
 
-<img src="./images/vue-hands-on.png">
+- **Bygga dynamiska UI** med reaktivitet
+- **Använda progressivt** - från enkelt till avancerat
+- **Skapa komponenter** för återanvändbar kod
+- **Hantera state** effektivt
+- **Bygga Single Page Applications (SPA)**
 
-På Vue Hands On får man en miljö för att öva och testa Vue.
-Viktigt att man enligt bilden har:
-1. Valt Composition och SFC.
-2. Gör man alla uppgifter och förstått då har man bra koll på Vue.
-3. Vi skriver vår Vue kod på över delen av höger sida.
-4. Man ser resultatet på nedre delen av höger sida.
+**Historik:** Vue.js skapades av **Evan You** (före detta Google-utvecklare) och underhålls idag av ett aktivt community.
 
-## Övergripande resurser för denna modul:
-- [Vue 3 Hands On](https://vuejs.org/tutorial/#step-1)
-- [Vue](https://vuejs.org/guide/quick-start.html)
-- [Youtube - Vue 3 With Danny](https://www.youtube.com/watch?v=9whgkjxoCME)
+**Tänk på Vue som** ett flexibelt ramverk som växer med dina behov - från enkla interaktiva sidor till komplexa applikationer.
 
+### Nyckelkoncept
 
-## 1.1 Getting started
-- [Vue 3 Hands On](https://vuejs.org/tutorial/#step-1)
+| Koncept | Förklaring |
+| ------- | ---------- |
+| **Reaktivitet** | UI uppdateras automatiskt när data ändras |
+| **Directives** | Speciella attribut som lägger beteende till HTML-element |
+| **Components** | Återanvändbara UI-delar med egen logik |
+| **Props** | Data som skickas från parent till child-komponent |
+| **Events** | Kommunikation från child till parent-komponent |
+| **Computed Properties** | Beräknade värden som uppdateras automatiskt |
+| **Watchers** | Reagera på förändringar i data |
 
-## 1.2 Interpolation
+---
 
-[Vue.js Interpolation Declarative Rendering](https://vuejs.org/tutorial/#step-2) <br>
+## Kom igång
 
-## 1.3 Attribute Binding
-[Vue.js Attribute Binding](https://vuejs.org/tutorial/#step-3) <br>
+### Steg 1: Vue 3 Hands On
 
-## 1.4 Event hanterare (klicka på knapp)
-[Vue.js Event Listeners](https://vuejs.org/tutorial/#step-4) <br>
+Börja med att gå igenom PowerPoint-presentationen `Vue.pptx` och öva i **Vue 3 Hands On**-miljön.
 
-## 1.5 Tvåvägs binding
-[Vue.js Form Bindings](https://vuejs.org/tutorial/#step-5) <br>
+<img src="./images/vue-hands-on.png" alt="Vue 3 Hands On Interface">
 
-## 1.6 Villkor
-[Vue.js Conditional Rendering](https://vuejs.org/tutorial/#step-6) <br>
+**Viktigt:** Kontrollera att du har:
+1. ✅ Valt **Composition API** och **SFC** (Single File Components)
+2. ✅ Skriv din Vue-kod i övre delen av högerpanelen
+3. ✅ Se resultatet i nedre delen av högerpanelen
+4. ✅ Följ alla steg och öva regelbundet
 
-## 1.7 Visa Listor
-[Vue.js List Rendering](https://vuejs.org/tutorial/#step-7) <br>
+---
 
-## 1.8 Computed Property
+## Kursinnehåll
 
-[Vue.js Computed Property](https://vuejs.org/tutorial/#step-8) <br>
+### 1.1 Getting Started
+Kom igång med Vue 3 och första komponenten.
 
-## 1.9 Livscykel event
+**Resurser:**
+- [Vue 3 Hands On - Step 1](https://vuejs.org/tutorial/#step-1)
 
-[Vue.js Lifecycle and Template Refs](https://vuejs.org/tutorial/#step-9)
+**Övningar:**
+- [Övning 0 - Projekt Setup](../övningar/README.md#övning-0---projekt-setup)
 
-## 1.10 Watchers
-[Vue.js Watchers](https://vuejs.org/tutorial/#step-10) <br>
+---
 
-## 1.11 Components
+### 1.2 Interpolation (Declarative Rendering)
+Visa data dynamiskt i templates med mustache-syntax.
 
-[Vue.js Components](https://vuejs.org/tutorial/#step-11) <br>
+**Resurser:**
+- [Vue.js Interpolation - Step 2](https://vuejs.org/tutorial/#step-2)
 
-## 1.12 Component Communication - Props
-Skicka data från parent-component till en child-component <br>
-[Vue.js Watchers](https://vuejs.org/tutorial/#step-12) <br>
+**Övningar:**
+- [Övning 0.1 - Interpolation](../övningar/README.md#övning-01---interpolation)
+- [Övning 2 - Data-bunden komponent](../övningar/README.md#övning-2---data-bunden-komponent-event-details)
 
-## 1.12 Component Communication - Props
-Skicka data från en parent-component till en child-component  
+---
 
-[Vue.js Props](https://vuejs.org/tutorial/#step-12) <br>
+### 1.3 Attribute Binding
+Binda attribut till data med `v-bind` eller `:`.
 
-## 1.13 Component Communication - Emit Events
-Skicka data från en child-component till en parent-component  
+**Resurser:**
+- [Vue.js Attribute Binding - Step 3](https://vuejs.org/tutorial/#step-3)
 
-[Vue.js Emit Events](https://vuejs.org/tutorial/#step-13) <br>
+**Övningar:**
+- [Övning 0.2 - Attribute Binding](../övningar/README.md#övning-02---attribute-binding)
+- [Övning 5 - Style Binding](../övningar/README.md#övning-5---style-bindning)
 
-## 1.14 Slots
+---
 
-### Resurser
+### 1.4 Event Handlers
+Hantera användarinteraktioner som klick med `v-on` eller `@`.
 
-[Vue.js Slots](https://vuejs.org/tutorial/#step-14) <br>
+**Resurser:**
+- [Vue.js Event Listeners - Step 4](https://vuejs.org/tutorial/#step-4)
+
+**Övningar:**
+- [Övning 0.7 - Eventhantering](../övningar/README.md#övning-07---eventhantering)
+- [Övning 1.1 - Formulär](../övningar/README.md#övning-11---formulär)
+
+---
+
+### 1.5 Tvåvägsbinding (Form Bindings)
+Synkronisera formulärdata med `v-model`.
+
+**Resurser:**
+- [Vue.js Form Bindings - Step 5](https://vuejs.org/tutorial/#step-5)
+
+**Övningar:**
+- [Övning 0.8 - Tvåvägsbinding](../övningar/README.md#övning-08---tvåvägsbinding-v-model)
+- [Övning 1.1 - Formulär](../övningar/README.md#övning-11---formulär)
+- [Övning 5 - Style Binding](../övningar/README.md#övning-5---style-bindning)
+
+---
+
+### 1.6 Villkorlig Rendering
+Visa/dölj element med `v-if`, `v-else` och `v-show`.
+
+**Resurser:**
+- [Vue.js Conditional Rendering - Step 6](https://vuejs.org/tutorial/#step-6)
+
+**Övningar:**
+- [Övning 0.3 - Villkorlig Rendering](../övningar/README.md#övning-03---villkorlig-rendering)
+- [Övning 7 - v-if direktivet](../övningar/README.md#övning-7---v-if-direktivet-villkorlig-rendering)
+
+---
+
+### 1.7 List Rendering
+Rendera listor dynamiskt med `v-for`.
+
+**Resurser:**
+- [Vue.js List Rendering - Step 7](https://vuejs.org/tutorial/#step-7)
+
+**Övningar:**
+- [Övning 0.4 - List Rendering](../övningar/README.md#övning-04---list-rendering)
+- [Övning 0.6 - API-anrop (Lista)](../övningar/README.md#övning-06---api-anrop-lista-av-objekt)
+- [Övning 1 - Hello From Group X](../övningar/README.md#övning-1---hello-from-group-x)
+- [Övning 2.2 - API-data presentation](../övningar/README.md#övning-22---api-data-presentation)
+
+---
+
+### 1.8 Computed Properties
+Beräknade värden som uppdateras automatiskt baserat på reaktiva data.
+
+**Resurser:**
+- [Vue.js Computed Property - Step 8](https://vuejs.org/tutorial/#step-8)
+
+**Övningar:**
+- [Övning 0.9 - Computed Properties & Watchers](../övningar/README.md#övning-09---computed-properties--watchers)
+- [Övning 8 - Class Binding & Computed Property](../övningar/README.md#övning-8---class-bindning--computed-property)
+
+---
+
+### 1.9 Lifecycle & Template Refs
+Livscykelhooks och komma åt DOM-element direkt.
+
+**Resurser:**
+- [Vue.js Lifecycle and Template Refs - Step 9](https://vuejs.org/tutorial/#step-9)
+
+**Övningar:**
+- [Övning 0.5 - API-anrop (Ett objekt)](../övningar/README.md#övning-05---api-anrop-ett-objekt)
+- [Övning 0.6 - API-anrop (Lista)](../övningar/README.md#övning-06---api-anrop-lista-av-objekt)
+- [Övning 2.2 - API-data presentation](../övningar/README.md#övning-22---api-data-presentation)
+
+---
+
+### 1.10 Watchers
+Reagera på specifika förändringar i data med `watch`.
+
+**Resurser:**
+- [Vue.js Watchers - Step 10](https://vuejs.org/tutorial/#step-10)
+
+**Övningar:**
+- [Övning 0.9 - Computed Properties & Watchers](../övningar/README.md#övning-09---computed-properties--watchers)
+- [Övning 6 - Watcher](../övningar/README.md#övning-6---watcher)
+
+---
+
+### 1.11 Components
+Skapa återanvändbara komponenter för att strukturera din kod.
+
+**Resurser:**
+- [Vue.js Components - Step 11](https://vuejs.org/tutorial/#step-11)
+
+**Övningar:**
+- [Övning 1 - Hello From Group X](../övningar/README.md#övning-1---hello-from-group-x)
+- [Övning 1.2 - Flera komponenter](../övningar/README.md#övning-12---flera-komponenter)
+- [Övning 2 - Data-bunden komponent](../övningar/README.md#övning-2---data-bunden-komponent-event-details)
+
+---
+
+### 1.12 Props - Komponentkommunikation (Parent → Child)
+Skicka data från en parent-komponent till en child-komponent.
+
+**Resurser:**
+- [Vue.js Props - Step 12](https://vuejs.org/tutorial/#step-12)
+
+**Övningar:**
+- [Övning 3 - Props (Parent → Child)](../övningar/README.md#övning-3---props-parent--child)
+
+---
+
+### 1.13 Emit Events - Komponentkommunikation (Child → Parent)
+Skicka data från en child-komponent till en parent-komponent.
+
+**Resurser:**
+- [Vue.js Emit Events - Step 13](https://vuejs.org/tutorial/#step-13)
+
+**Övningar:**
+- [Övning 4 - Emit Events (Child → Parent)](../övningar/README.md#övning-4---emit-events-child--parent)
+
+---
+
+### 1.14 Slots
+Flexibelt innehåll i komponenter med slots.
+
+**Resurser:**
+- [Vue.js Slots - Step 14](https://vuejs.org/tutorial/#step-14)
+
+---
+
+---
+
+## Övningar
+
+Praktiska övningar för att träna Vue.js 3-koncept. Varje övning är kopplad till motsvarande avsnitt ovan.
+
+**Se:** [`övningar/README.md`](./övningar/README.md) för alla övningar med instruktioner och exempel.
 

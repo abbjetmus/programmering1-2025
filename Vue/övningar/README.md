@@ -1,235 +1,327 @@
-# Övningar
+# Vue.js Övningar
 
-Ni som upplever att uppgifterna är för lätta och vill ha lite mer utmanande mindre projekt så kolla på den här länken:
-<https://rojas.io/vue-js-practice-project-ideas/>
+Praktiska övningar för att träna Vue.js 3-koncept. Varje övning är kopplad till motsvarande avsnitt i [huvudguiden](../README.md).
 
-### Övning 0 - Skapa ett nytt Vue projekt med Vue-CLI
-Skapa ett nytt projekt med Vue CLI dvs via kommandofönstret, minns du inte kolla på beskrivningen i mappen en nivå upp.
-Du kan göra övningarna för 0 i App.vue komponenten. Alternativt ska ett Quasar Framework projekt och jobba i pages/IndexPage.vue
+**Utmaning:** För mer avancerade projektidéer, se [Vue.js Practice Project Ideas](https://rojas.io/vue-js-practice-project-ideas/)
 
-#### Övning 0.1 - Interpolering
-1. Skapa en data variabel *message* med värdet "Hello Vue!" och visa värdet i HTML koden genom interpolering {{}}.
-2. Hitta på lite fler variabler med olika typer och visa dem med.
+---
 
-#### Övning 0.2 - Attribut bindning
-1. Skapa en data variabel *link* med värdet på en valfri Youtube video. Skapa sedan en länk-tagg <a>a</a>-tagg som binder till länk variabeln, verifiera så att länken fungerar när du klickar på den.
-2. Skapa en data variabel *image* med värdet på en bildaddress på en valfri bild från nätet.
-Skapa sedan en img-tagg vars src-attribut binder till image variabeln och visar bilden på skärmen.
+## Grundläggande Övningar (0.x)
 
-#### Övning 0.3 - HTML Villkor
-1. Skapa en data variabel *age* med värdet på en ålder som du själv bestämmer. 
-2. Använd sedan *v-if* direktivet i HTML section för att kontrollera ifall age variabeln är större än 18. Stämmer villkoret ska en p-tagg visas med texten "Du får ta körkort! annars visas texten "Tyvärr du får inte ta körkort!".
+### Övning 0 - Projekt Setup
+Skapa ett nytt Vue-projekt med Vue CLI (via kommandofönstret). Se beskrivningen i [README.md](../README.md) för instruktioner.
 
-#### Övning 0.4 - Loopar i HTML med v-for
-1. Skapa en data variabel som är en lista med talen *1 till 10*. 
-2. Använd sedan *v-for* direktivet i HTML section för att loopa/gå igenom listan med talen och skriv ut dem med hjälp av interpolering och en oordnad lista ul/li.
+**Tips:** Du kan göra övningarna 0.1-0.11 i `App.vue`-komponenten. Alternativt kan du skapa ett Quasar Framework-projekt och arbeta i `pages/IndexPage.vue`.
 
-#### Övning 0.5 - API anrop för att hämta ett objekt och presentera det
-1. Skapa en variabel som heter *photo* som är null från början.
-2. I *onMounted()* metoden gör ett API-anrop med *fetch()* som hämtar ett photo objekt och tilldelar det till *photo* data variabeln.<br>
+---
+
+### Övning 0.1 - Interpolation
+**Relaterat till:** [1.2 Interpolation](../README.md#12-interpolation-declarative-rendering)
+
+**Uppgift:**
+1. Skapa en data-variabel `message` med värdet `"Hello Vue!"` och visa värdet i HTML-koden genom interpolering `{{ }}`.
+2. Skapa fler variabler med olika typer (sträng, siffra, boolean) och visa dem.
+
+**Tips:** Använd mustache-syntax `{{ variabel }}` för att visa data.
+
+---
+
+### Övning 0.2 - Attribute Binding
+**Relaterat till:** [1.3 Attribute Binding](../README.md#13-attribute-binding)
+
+**Uppgift:**
+1. Skapa en data-variabel `link` med värdet på en valfri YouTube-video.
+2. Skapa en `<a>`-tagg som binder till `link`-variabeln med `v-bind` eller `:`. Verifiera att länken fungerar.
+3. Skapa en data-variabel `image` med värdet på en bild-URL från nätet.
+4. Skapa en `<img>`-tagg vars `src`-attribut binder till `image`-variabeln.
+
+---
+
+### Övning 0.3 - Villkorlig Rendering
+**Relaterat till:** [1.6 Villkorlig Rendering](../README.md#16-villkorlig-rendering)
+
+**Uppgift:**
+1. Skapa en data-variabel `age` med ett åldersvärde (du väljer själv).
+2. Använd `v-if`-direktivet för att kontrollera om `age` är större än 18.
+   - Om villkoret stämmer: visa texten "Du får ta körkort!"
+   - Annars: visa texten "Tyvärr du får inte ta körkort!"
+
+**Tips:** Använd `<p v-if="age > 18">...</p>` och `<p v-else>...</p>`.
+
+---
+
+### Övning 0.4 - List Rendering
+**Relaterat till:** [1.7 List Rendering](../README.md#17-list-rendering)
+
+**Uppgift:**
+1. Skapa en data-variabel som är en lista med talen 1 till 10.
+2. Använd `v-for`-direktivet för att loopa igenom listan och skriv ut talen med interpolering i en oordnad lista (`<ul>`/`<li>`).
+
+**Tips:** Använd `<li v-for="num in numbers" :key="num">{{ num }}</li>`.
+
+---
+
+### Övning 0.5 - API-anrop (Ett objekt)
+**Relaterat till:** [1.9 Lifecycle & Template Refs](../README.md#19-lifecycle--template-refs)
+
+**Uppgift:**
+1. Skapa en variabel `photo` som är `null` från början.
+2. I `onMounted()`-metoden gör ett API-anrop med `fetch()` som hämtar ett photo-objekt och tilldelar det till `photo`-variabeln.
 
 ```js
 onMounted(() => {
-
+  // Ditt fetch-anrop här
 })
 ```
 
-<https://jsonplaceholder.typicode.com/photos/1>
-3. Presentera sedan photo objektets värden i html med interpolation.
+**API-endpoint:** [https://jsonplaceholder.typicode.com/photos/1](https://jsonplaceholder.typicode.com/photos/1)
 
-#### Övning 0.6 - API anrop för att hämta en lista av objekt
-1. Skapa en variabel som heter *photos* som är null från början.
-2. I *onMounted()* metoden gör ett API-anrop med *fetch()* som hämtar ett photo objekt och tilldelar det till *photo* data-variabeln.<br>
+3. Presentera photo-objektets värden i HTML med interpolation.
+
+---
+
+### Övning 0.6 - API-anrop (Lista av objekt)
+**Relaterat till:** [1.7 List Rendering](../README.md#17-list-rendering) & [1.9 Lifecycle](../README.md#19-lifecycle--template-refs)
+
+**Uppgift:**
+1. Skapa en variabel `photos` som är `null` från början.
+2. I `onMounted()`-metoden gör ett API-anrop med `fetch()` som hämtar en lista med photos och tilldelar den till `photos`-variabeln.
 
 ```js
 onMounted(() => {
-
+  // Ditt fetch-anrop här
 })
 ```
 
-<https://jsonplaceholder.typicode.com/photos/1>
-3. Presentera sedan photo objektets värden i html med interpolation.
+**API-endpoint:** [https://jsonplaceholder.typicode.com/photos](https://jsonplaceholder.typicode.com/photos)
 
-#### Övning 0.7 - Eventhantering med knappar
-1. Skapa en data variabel som heter *name* och som innehåller ert förnamn. Visa namnet med interpolering på skärmen.
-2. Skapa sedan en knapp med texten "byt namn", koppla på ett klick-event/metod som körs när man klickar på knappen så att *name* variabeln uppdateras till ditt efternamn istället. Du kan döpa metoden till vad du vill tex changeName().
+3. Presentera photos med `v-for` i HTML.
 
-### Övning 0.8 - Två-vägs bindning och computed (beräknade variabler)
-1. Skapa två data-variabler för firstName och lastName.
-2. Skapa två input-fält som har två-vägbindning med lastName och firstName dvs **v-model**.
-3. Visa för och efternamn brevid varandra med interpolering {{firstName}} {{lastName}}.
+---
 
-### Övning 0.9 - Computed & Watchers
-Skapa Computed och Watch exemplen i powerpoint presentationen och försök förstå vad dem gör.
+### Övning 0.7 - Eventhantering
+**Relaterat till:** [1.4 Event Handlers](../README.md#14-event-handlers)
 
-### Övning 0.10 - Class-bindning
-1. Skapa en div.
-2. Skapa två klasser innanför style taggen som heter green-background och red-background.
-Som ger diven följande egenskaper, men ska ha olika färger dvs grönt och rött.
+**Uppgift:**
+1. Skapa en data-variabel `name` med ditt förnamn. Visa namnet med interpolering.
+2. Skapa en knapp med texten "Byt namn".
+3. Koppla ett klick-event (`@click` eller `v-on:click`) som kör en metod som uppdaterar `name` till ditt efternamn.
 
+**Tips:** Skapa en metod `changeName()` och använd `@click="changeName"`.
+
+---
+
+### Övning 0.8 - Tvåvägsbinding (v-model)
+**Relaterat till:** [1.5 Tvåvägsbinding](../README.md#15-tvåvägsbinding-form-bindings)
+
+**Uppgift:**
+1. Skapa två data-variabler: `firstName` och `lastName`.
+2. Skapa två input-fält som har tvåvägsbinding med `v-model` till respektive variabel.
+3. Visa förnamn och efternamn brevid varandra med interpolering: `{{ firstName }} {{ lastName }}`.
+
+---
+
+### Övning 0.9 - Computed Properties & Watchers
+**Relaterat till:** [1.8 Computed Properties](../README.md#18-computed-properties) & [1.10 Watchers](../README.md#110-watchers)
+
+**Uppgift:**
+Skapa exemplen på Computed Properties och Watchers från PowerPoint-presentationen och försök förstå vad de gör.
+
+---
+
+### Övning 0.10 - Class Binding
+**Relaterat till:** [Style Binding](#övning-5---style-bindning)
+
+**Uppgift:**
+1. Skapa en `div`.
+2. Skapa två CSS-klasser i `<style>`-taggen:
+   - `green-background` (bakgrundsfärg: grön)
+   - `red-background` (bakgrundsfärg: röd)
+
+Båda ska ha:
+```css
+width: 200px;
+height: 200px;
 ```
-  width: 200px;
-  height: 200px;
-  background-color: green;
-``` 
 
-3. Skapa en variabel isGreen som bestämmer vilken klass som appliceras på diven med hjälp av class-bindning.
-4. Skapa en knapp som ändrar på isGreen och sedan på klassen.
+3. Skapa en variabel `isGreen` som bestämmer vilken klass som appliceras.
+4. Använd class-binding (`:class`) för att binda rätt klass till diven.
+5. Skapa en knapp som ändrar `isGreen` och därmed klassen.
 
-### Övning 0.11 - Style-bindning
-Skapa Computed och Watch exemplen i powerpoint presentationen och försök förstå vad dem gör.
+---
 
-### Övning 1 - Hello From Group X - Skapa och visa en komponent
-3. I en valfri komponent i projektet skapa en rubrik med texten "Hello From Group X" tillsammans med en lista på namnen av alla grupp medlemmar i din basgrupp.
-"Hello From Group X" och listan ska deklareras som vue data variabler.
+### Övning 0.11 - Style Binding
+**Relaterat till:** [Style Binding](#övning-5---style-bindning)
+
+**Uppgift:**
+Skapa exemplen på Style Binding från PowerPoint-presentationen och försök förstå vad de gör.
+
+## Komponenter & Avancerade Övningar
+
+---
+
+### Övning 1 - Hello From Group X
+**Relaterat till:** [1.11 Components](../README.md#111-components)
+
+**Uppgift:**
+I en valfri komponent i projektet:
+1. Skapa en rubrik med texten "Hello From Group X" (ersätt X med ditt gruppnummer).
+2. Skapa en lista med namnen på alla gruppmedlemmar i din basgrupp.
+3. Både rubriken och listan ska deklareras som Vue data-variabler.
+
+---
 
 ### Övning 1.1 - Formulär
-1. Skapa 4 input-fält för address, postnummer, stad och land.
+**Relaterat till:** [1.5 Tvåvägsbinding](../README.md#15-tvåvägsbinding-form-bindings)
+
+**Uppgift:**
+1. Skapa 4 input-fält för: address, postnummer, stad och land.
 2. Skapa 4 variabler i data-sektionen för att spara det som matas in.
-3. Skapa en knapp som skriver det som matats in i ***alert()***
+3. Skapa en knapp som visar det som matats in i en `alert()`.
+
+---
 
 ### Övning 1.2 - Flera komponenter
+**Relaterat till:** [1.11 Components](../README.md#111-components)
+
+**Uppgift:**
 1. Skapa 4 input-fält för address, postnummer, stad och land.
+2. Organisera koden i separata komponenter.
 
-![Komponenter](./komponents.png)
-
-
-### Övning 2 - Skapa en data-bunden komponent
-Lägg till en ny komponent för att visa ett lektions-event med hjälp av html och datat nedan.<br>
-Det du behöver göra:
-
-1. Skapa komponenten **EventDetailsComponent** eller lägg koden direkt i **App** komponenten.
-Du kan antigen skapa ett CLI Vue projekt eller göra det genom att länka in Vue som i övning 1. 
-HTML koden (utan data-bindningar) finns **_nedan_**.
-
-2. Skapa en variabel i data-sektionen för att hålla datat. 
-Datat för komponenten finns **_nedan_**.
-
-3. Lägg till de nödvändiga data-bindningarna (med interpolation) till komponentens template del.
-  
-4. Importera komponenten till App-komponenten och lägg till den i template delen för att visas.
-
-### Resultatet
 ---
-### Event: Smarta System 2020
-**Date:** 24/8/2020 <br>
-**Time:** 13:00 <br>
-**Address:** Robotvägen 4, 721 36 Västerås, Sverige <br>
 
+### Övning 2 - Data-bunden komponent (Event Details)
+**Relaterat till:** [1.11 Components](../README.md#111-components) & [1.2 Interpolation](../README.md#12-interpolation-declarative-rendering)
 
-####_Här är start html för template:_####
+**Uppgift:**
+Skapa en komponent för att visa ett lektions-event.
 
-```
+**Steg:**
+1. Skapa komponenten `EventDetailsComponent` (eller lägg koden direkt i `App`-komponenten).
+2. Skapa en variabel i data-sektionen för att hålla event-datat.
+3. Lägg till data-bindningar (interpolation) i template-delen.
+4. Importera och använd komponenten i `App`-komponenten.
 
+**Start-HTML för template:**
+```html
 <div>
-  <h1>
-    Event:
-  </h1>
-  
-  <div>
-    Date:
-  </div>
-  
-  <div>
-    Time:
-  </div>
-  
-  <div>
-    Address:
-  </div>
+  <h1>Event:</h1>
+  <div>Date:</div>
+  <div>Time:</div>
+  <div>Address:</div>
 </div>
-
 ```
 
-  
-
-####_Här är datat:_####
-
-```
+**Event-data:**
+```js
 {
-  name:'Smarta System 2020', 
-  date: '24/8/2020', 
-  time: '13:00', 
-  location: { 
-    address: 'Robotvägen 4', 
-    zipcode: '721 36', 
-    city: 'Västerås', 
+  name: 'Smarta System 2020',
+  date: '24/8/2020',
+  time: '13:00',
+  location: {
+    address: 'Robotvägen 4',
+    zipcode: '721 36',
+    city: 'Västerås',
     country: 'Sverige'
   }
 }
-
 ```
-### Övning 2.2 - Hämta data valfri data från API och presentera det
-Använd tjänsten JSON-Placeholder för att göra api-anrop och hämta valfri data och presentera den.
-<br>
-<https://jsonplaceholder.typicode.com/>
-<br>
-<br>
-### Övning 3 - Kommunikation mellan komponenter Parent -> Child
-**_Instruktioner_**: **EventDetailsComponent**:en visar information om ett lektions-event, där adress är inkluderad.
-Skapa en ny child komponent som ska hantera att adressen visas och skicka eventets adress in till den nya komponenten från EventDetailsComponenten.<br>
-Det du behöver göra:
 
-_HINT:_ Namnge inte din komponent `<address>`. `<address>` är redan ett HTML5 element.
+**Förväntat resultat:**
+- **Event:** Smarta System 2020
+- **Date:** 24/8/2020
+- **Time:** 13:00
+- **Address:** Robotvägen 4, 721 36 Västerås, Sverige
 
-1. Skapa en ny adress komponent som tar in adress data som **prop** 
-
-2. Updatera event-details komponenten att inkludera adress komponenten och skicka in adress-delen av event-datat.
-
-### Resultatet
 ---
-Samma som i övning 2.
 
-### Övning 4 - Kommunikation mellan komponenter Child -> Parent
-**_Instruktioner_**: 
+### Övning 2.2 - API-data presentation
+**Relaterat till:** [1.9 Lifecycle](../README.md#19-lifecycle--template-refs) & [1.7 List Rendering](../README.md#17-list-rendering)
 
-1. Skapa 4 **input**-element och 4 **button**-element i adress-komponenten.  
+**Uppgift:**
+Använd tjänsten JSON Placeholder för att göra API-anrop och hämta valfri data och presentera den.
 
-2. Fixa så att genom **Child -> Parent** kommunikation så att när man fyllt i ett fält och klickar på motsvarande knapp ska adressen uppdateras för den delen i EventDetailsComponenten.
+**Resurser:**
+- [JSON Placeholder API](https://jsonplaceholder.typicode.com/)
 
-### Resultatet
 ---
-![överblick](https://github.com/abbjoafli/Programmering-1/blob/master/3.Vue/%C3%B6vningar/SmartaSystemExercise4.PNG)
 
-### Övning 5 - Styles Bindning
-**_Instruktioner_**: 
+### Övning 3 - Props (Parent → Child)
+**Relaterat till:** [1.12 Props - Komponentkommunikation](../README.md#112-props---komponentkommunikation-parent--child)
 
-1. Skapa en **input**-element brevid titeln på sidan.  
+**Uppgift:**
+`EventDetailsComponent` visar information om ett lektions-event inklusive adress. Skapa en ny child-komponent som visar adressen.
 
-2. Använd two-way-binding med **v-model** för att koppla värdet från fältet till en data-variabel kanske **titleColor**.
+**Steg:**
+1. Skapa en ny adress-komponent som tar in adress-data som **prop**.
+2. Uppdatera `EventDetailsComponent` att inkludera adress-komponenten och skicka in adress-delen av event-datat.
 
-3. Använd sedan **style-binding** så att titelns färg ändras till den färgen man matat in.
+**⚠️ Viktigt:** Namnge inte din komponent `<address>`. `<address>` är redan ett HTML5-element. Använd ett namn som `AddressDisplay` eller `EventAddress`.
 
-### Resultatet
+**Förväntat resultat:** Samma som i övning 2, men med adressen i en separat komponent.
+
 ---
-![överblick](https://github.com/abbjoafli/Programmering-1/blob/master/3.Vue/%C3%B6vningar/style-binding.PNG)
 
+### Övning 4 - Emit Events (Child → Parent)
+**Relaterat till:** [1.13 Emit Events - Komponentkommunikation](../README.md#113-emit-events---komponentkommunikation-child--parent)
+
+**Uppgift:**
+Utöka adress-komponenten från övning 3 med funktionalitet att uppdatera adressen.
+
+**Steg:**
+1. Skapa 4 `<input>`-element och 4 `<button>`-element i adress-komponenten.
+2. Genom **Child → Parent**-kommunikation (emit events): när användaren fyllt i ett fält och klickar på motsvarande knapp, ska adressen uppdateras för den delen i `EventDetailsComponent`.
+
+**Förväntat resultat:**
+![överblick](./SmartaSystemExercise4.PNG)
+
+---
+
+### Övning 5 - Style Binding
+**Relaterat till:** [1.3 Attribute Binding](../README.md#13-attribute-binding)
+
+**Uppgift:**
+1. Skapa ett `<input>`-element bredvid titeln på sidan.
+2. Använd tvåvägsbinding med `v-model` för att koppla värdet från fältet till en data-variabel `titleColor`.
+3. Använd style-binding (`:style`) så att titelns färg ändras till den färg som matats in.
+
+**Förväntat resultat:**
+![överblick](./style-binding.PNG)
+
+---
 
 ### Övning 6 - Watcher
-**_Instruktioner_**: 
+**Relaterat till:** [1.10 Watchers](../README.md#110-watchers)
 
-1. Skapa en **watcher** på **titleColor** data-variabeln som skriver ut "Jippy min favoritfärg!"
+**Uppgift:**
+1. Skapa en **watcher** på `titleColor` data-variabeln som skriver ut "Jippy min favoritfärg!" i konsolen när färgen ändras.
 
-### Resultatet
+**Tips:** Använd `watch()` i Composition API.
+
+**Förväntat resultat:**
+![överblick](./watcher.PNG)
+
 ---
-![överblick](https://github.com/abbjoafli/Programmering-1/blob/master/3.Vue/%C3%B6vningar/watcher.PNG)
 
-### Övning 7 - v-if direktivet
-**_Instruktioner_**: 
+### Övning 7 - v-if direktivet (Villkorlig rendering)
+**Relaterat till:** [1.6 Villkorlig Rendering](../README.md#16-villkorlig-rendering)
 
-1. Applicera **v-if**-direktivet så att titeln inte syns ifall färgen är **brown**.  
+**Uppgift:**
+1. Applicera `v-if`-direktivet så att titeln inte syns om färgen är **"brown"**.
 
-### Resultatet
+**Förväntat resultat:**
+![överblick](./v-if-brown.PNG)
+
 ---
-![överblick](https://github.com/abbjoafli/Programmering-1/blob/master/3.Vue/%C3%B6vningar/v-if-brown.PNG)
 
-### Övning 8 - Class Bindning & Computed Property
-**_Instruktioner_**: 
+### Övning 8 - Class Binding & Computed Property
+**Relaterat till:** [1.8 Computed Properties](../README.md#18-computed-properties)
 
-1. Använd en **computed property** för att hålla koll på ifall färgen är **brown** tex **isBrown**.
+**Uppgift:**
+1. Använd en **computed property** för att hålla koll på om färgen är **"brown"** (t.ex. `isBrown`).
+2. Applicera class-binding med hjälp av `isBrown` så att all text blir brun.
 
-2. Applicera **Class**-bindning med hjälp av **isBrown** så att all text blir brun. Hint: måste skapa en css class i styles.
+**Tips:** Du måste skapa en CSS-klass i `<style>`-taggen som gör texten brun.
 
-### Resultatet
----
-![överblick](https://github.com/abbjoafli/Programmering-1/blob/master/3.Vue/%C3%B6vningar/isBrown.PNG)
+**Förväntat resultat:**
+![överblick](./isBrown.PNG)
