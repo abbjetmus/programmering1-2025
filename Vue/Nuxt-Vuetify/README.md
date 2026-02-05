@@ -48,7 +48,6 @@ nuxt-vuetify-template/
 ├── pages/
 ├── plugins/
 ├── public/
-├── server/
 ├── app.vue
 ├── nuxt.config.ts
 └── package.json
@@ -99,13 +98,6 @@ Felsidan för din Nuxt-applikation. Visas när ett fel uppstår.
 
 #### `public/`
 Innehåller publika filer som serveras i root och inte modifieras av build-processen. Lämpligt för filer som måste behålla sina namn (t.ex. `robots.txt`) eller sannolikt inte kommer att ändras (t.ex. `favicon.ico`).
-
-#### `server/`
-Innehåller server-side kod för Nuxt-applikationen:
-- `server/api/` - API routes för applikationen
-- `server/routes/` - Server routes (t.ex. dynamisk `/sitemap.xml`)
-- `server/middleware/` - Kör kod innan en server route processas
-- `server/utils/` - Funktioner som kan användas i server-koden
 
 ## Ny fil i pages
 
@@ -200,11 +192,14 @@ export const useFirebase = () => {
 }
 ```
 
-## Övning 0. Skapa ett nytt Vuetify projekt
+## Övning 0. Klona och öppna Nuxt-Vuetify projektet
 
-1. Skapa ett nytt Vuetify projekt enligt instruktionerna ovan.
-2. Öppna sedan projektet i webbläsaren.
-3. Bekanta dig med mapparna innanför **src**-mappen.
+1. Klona template-repot enligt instruktionerna ovan.
+2. Installera beroenden med `npm install`.
+3. Starta utvecklingsservern med `npm run dev`.
+4. Öppna projektet i webbläsaren på `http://localhost:3000`.
+5. Öppna projektet i Visual Studio Code med `code .`
+6. Bekanta dig med mappstrukturen och utforska de olika mapparna.
 
 ## Övning 1. Importera en komponent till en page
 
