@@ -6,6 +6,7 @@ Vuetify är ett Material Design-komponentbibliotek för Vue.js som förenklar ut
 
 [Vuetify Documentation](https://vuetifyjs.com/en/)
 [Vuetify YouTube Tutorial](https://www.youtube.com/watch?v=AptYLMzTrns)
+[Nuxt.js YouTube Tutorial](https://www.youtube.com/watch?v=RhZZ0whiuT8&t=345s)
 
 # Skapa ett Nuxt-Vuetify Projekt
 
