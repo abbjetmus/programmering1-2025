@@ -241,6 +241,14 @@ I den här uppgiften ska ni använda Vuetifys grid-system för att skapa en resp
 
 [Vuetify Grid System](https://vuetifyjs.com/en/components/grids/)
 
+Brytpunkterna i Vuetify fungerar med en "mobile-first"-princip. Det betyder att `cols` gäller för de minsta skärmstorlekarna (xs och sm) och sedan tar `md` och `lg` över när skärmen blir tillräckligt bred:
+
+- `cols="12"` → Gäller för xs och sm (små skärmar, t.ex. mobiler). Kolumnen tar hela bredden (12 av 12).
+- `md="6"` → Från md-brytpunkten (≥960px) och uppåt tar kolumnen halva bredden (6 av 12), om inte en större brytpunkt är satt.
+- `lg="4"` → Från lg-brytpunkten (≥1280px) och uppåt tar kolumnen en tredjedel av bredden (4 av 12).
+
+Så layouten anpassar sig automatiskt: på en mobil visas kolumnerna under varandra, på en surfplatta visas två per rad, och på en stor skärm visas tre per rad.
+
 ```vue
 <template>
   <v-container>
