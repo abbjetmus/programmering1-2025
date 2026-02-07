@@ -21,6 +21,9 @@ git clone https://github.com/abbjetmus/Nuxt-Vuetify-Template.git
 # Gå in i projektmappen
 cd Nuxt-Vuetify-Template
 
+# Använd command prompt
+cmd
+
 # Installera beroenden
 npm install
 
@@ -195,7 +198,8 @@ export const useFirebase = () => {
 
 ## Övning 0. Klona och öppna Nuxt-Vuetify projektet
 
-1. Klona template-repot enligt instruktionerna ovan.
+0. Klona template-repot enligt instruktionerna ovan.
+1. Använd command prompt `cmd`
 2. Installera beroenden med `npm install`.
 3. Starta utvecklingsservern med `npm run dev`.
 4. Öppna projektet i webbläsaren på `http://localhost:3000`.
